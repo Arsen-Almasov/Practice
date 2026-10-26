@@ -1,0 +1,70 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyN6sYlpf3MGPK/tPMG5ID4Y",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Arsen-Almasov/Practice/blob/main/tips_csv.\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "import pandas as pd\n",
+        "\n",
+        "# Создаем тестовые данные (официантские чаевые)\n",
+        "data = {\n",
+        "    'total_bill': [16.99, 10.34, 21.01, 23.68, 24.59],\n",
+        "    'tip': [1.01, 1.66, 3.50, 3.31, 3.61],\n",
+        "    'sex': ['Female', 'Male', 'Male', 'Male', 'Female'],\n",
+        "    'smoker': ['No', 'No', 'No', 'No', 'No'],\n",
+        "    'day': ['Sun', 'Sun', 'Sun', 'Sun', 'Sun'],\n",
+        "    'time': ['Dinner', 'Dinner', 'Dinner', 'Dinner', 'Dinner'],\n",
+        "    'size': [2, 3, 3, 2, 4]\n",
+        "}\n",
+        "\n",
+        "# Сохраняем в файл tips.csv\n",
+        "df = pd.DataFrame(data)\n",
+        "df.to_csv('tips.csv', index=False)\n",
+        "\n",
+        "print(\"Файл tips.csv успешно создан и заполнен данными!\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mjs_OPEA4SHB",
+        "outputId": "02272a9d-d5ee-4173-c370-0db3b519c254"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Файл tips.csv успешно создан и заполнен данными!\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
